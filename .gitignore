@@ -1,0 +1,11 @@
+.env
+node_modules/
+out/
+cache/
+broadcast/
+contracts/out/
+contracts/cache/
+contracts/broadcast/
+barretenberg.md/
+foundry.md/
+noir.md/
