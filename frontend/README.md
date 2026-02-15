@@ -1,40 +1,45 @@
-# Agentix - AI Agent Tailwind Template
-#### Preview
+# ZK-Proof-of-Existence Frontend
 
- - [Demo](https://themewagon.github.io/agentix-react/)
+React frontend for the Zero-Knowledge Proof of Existence system.
 
-#### Download
- - [Download from ThemeWagon](https://themewagon.com/themes/agentix-react/)
+## Quick Start
 
-## Getting Started
-
-1. Clone Repository
+1. Install dependencies:
+```bash
+npm install
 ```
-git clone https://github.com/themewagon/agentix-react.git
-```
-2. Install Dependencies
-```
-npm i
-```
-3. Run the development server:
 
+2. Create `.env` file from example:
+```bash
+cp .env.example .env
+```
+
+3. Add your Privy App ID to `.env`:
+```
+VITE_PRIVY_APP_ID=your_app_id_here
+VITE_PINATA_JWT=your_jwt_here  # Optional, for IPFS features
+```
+
+4. Run development server:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-## Author 
+5. Open [http://localhost:5173](http://localhost:5173)
+
+## Build for Production
+
+```bash
+npm run build
 ```
-Design and code is completely written by PrebuiltUI and development team. 
-```
+
+## Author
+
+**Prazwal Ratti**
+- Email: prazwalr07@gmail.com
+- GitHub: [@PrazwalR](https://github.com/PrazwalR)
+- Twitter: [@RattiPrazwal](https://x.com/RattiPrazwal)
 
 ## License
 
- - Design and Code is Copyright &copy; <a href="https://prebuiltui.com/?utm_source=agentix" target="_blank">PrebuiltUI</a>
- - Licensed cover under [MIT]
- - Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+MIT License - See main [README](../README.md) for full details.

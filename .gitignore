@@ -1,8 +1,32 @@
+# Environment variables (private keys, API keys, etc.)
 .env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+
+# Dependencies
 node_modules/
+
+# Build outputs
 out/
 cache/
+dist/
+target/
+
+# Deployment artifacts (may contain addresses/private data)
 broadcast/
 contracts/out/
 contracts/cache/
 contracts/broadcast/
+
+# OS files
+.DS_Store
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
