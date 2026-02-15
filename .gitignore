@@ -6,6 +6,6 @@ broadcast/
 contracts/out/
 contracts/cache/
 contracts/broadcast/
-barretenberg.md/
-foundry.md/
-noir.md/
+barretenberg.md
+noir.md
+foundry.md
