@@ -1,0 +1,26 @@
+document_hash = "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef"
+salt = "0x0abcdef1234567890abcdef1234567890abcdef1234567890abcdef123456789"
+
+# "alice@mit.edu" padded to 100 bytes
+author_email = [97, 108, 105, 99, 101, 64, 109, 105, 116, 46, 101, 100, 117, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+file_size = "2097152"
+
+# "pdf" padded to 20 bytes
+file_type = [112, 100, 102, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+# PUBLIC INPUTS
+commitment = "0x2de81b14360c7f454fbb293eb1fd7529e7437a3e9b9a2e4810bebb3fe2ff283c"
+
+reveal_email_domain = true
+reveal_size_range = true
+reveal_file_type = true
+
+# Pedersen hash of "mit.edu" domain bytes
+claimed_domain_hash = "0x0a7c7dfa107977a554c8f35de597e49a0fcf0b5990c1d774f902dbebb593e22b"
+
+claimed_size_min = "1000000"
+claimed_size_max = "3000000"
+
+# "pdf" padded to 20 bytes (same as file_type)
+claimed_file_type = [112, 100, 102, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
