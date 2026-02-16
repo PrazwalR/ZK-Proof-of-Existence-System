@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MenuIcon, XIcon, LogOut, Wallet, Copy } from "lucide-react";
+import { MenuIcon, XIcon, LogOut, Wallet, Copy, Download } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
 import { usePrivy, useWallets } from "@privy-io/react-auth";
@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const { login, logout, authenticated, user, ready } = usePrivy();
+    const { login, logout, authenticated, user, ready, exportWallet } = usePrivy();
     const { wallets } = useWallets();
     const navigate = useNavigate();
 
@@ -39,7 +39,7 @@ export default function Navbar() {
                 transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1 }}
             >
                 <Link to="/" className="flex items-center gap-2">
-                    <img alt="ZK-PoE logo" src="/assets/logo.svg" style={{maxHeight: '40px', maxWidth: '160px'}} />
+                    <img alt="ZK-PoE logo" src="/assets/logo.svg" style={{ maxHeight: '40px', maxWidth: '160px' }} />
                 </Link>
 
                 <div className="hidden lg:flex items-center gap-8 transition duration-500">
@@ -64,6 +64,19 @@ export default function Navbar() {
                                     <Copy className="size-3 text-slate-500" />
                                 </button>
                             )}
+                            <button
+                                onClick={async () => {
+                                    try {
+                                        await exportWallet();
+                                    } catch (error) {
+                                        toast.error('Failed to export wallet');
+                                    }
+                                }}
+                                className="flex items-center gap-2 hover:bg-indigo-600/20 transition px-4 py-2 border border-indigo-500 rounded-md active:scale-95 text-sm text-indigo-400"
+                                title="Export private key"
+                            >
+                                <Download className="size-4" /> Export
+                            </button>
                             <button
                                 onClick={() => logout()}
                                 className="flex items-center gap-2 hover:bg-slate-300/20 transition px-4 py-2 border border-slate-400 rounded-md active:scale-95 text-sm"

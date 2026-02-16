@@ -12,7 +12,7 @@ export default function Footer() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14">
                 <div className="sm:col-span-2 lg:col-span-1">
                     <Link to="/" className="flex items-center gap-2">
-                        <img alt="ZK-PoE logo" src="/assets/logo.svg" style={{maxHeight: '40px', maxWidth: '160px'}} />
+                        <img alt="ZK-PoE logo" src="/assets/logo.svg" style={{ maxHeight: '40px', maxWidth: '160px' }} />
                     </Link>
                     <p className="text-sm/7 mt-6">Zero-Knowledge Proof of Existence — privacy-preserving document timestamping powered by Noir circuits and the Arbitrum blockchain.</p>
                 </div>
